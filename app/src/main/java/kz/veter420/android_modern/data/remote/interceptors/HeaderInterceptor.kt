@@ -14,7 +14,7 @@ class HeaderInterceptor : Interceptor {
         val requestBuilder = original.newBuilder()
             .addHeader("Content-Type", "application/json")
             .addHeader("Device-Type", "Android")
-            .addHeader("User-Agent", "Zhasa/${BuildConfig.VERSION_NAME} (${BuildConfig.APPLICATION_ID}; " +
+            .addHeader("User-Agent", "Modern/${BuildConfig.VERSION_NAME} (${BuildConfig.APPLICATION_ID}; " +
                     "build:${BuildConfig.VERSION_CODE}; " +
                     "Android SDK ${Build.VERSION.SDK_INT}) " +
                     "okhttp/${okhttp3.OkHttp.VERSION} " +

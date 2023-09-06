@@ -9,7 +9,7 @@ import kz.veter420.android_modern.utils.getCurrentYear
 class PrefManager(context: Context) {
 
     companion object {
-        const val PREF_NAME = "zhasa_pref"
+        const val PREF_NAME = "my_pref"
     }
 
     private val gson = Gson()

@@ -1,4 +1,4 @@
-package kz.startup.zhasa.ui.components
+package kz.veter420.android_modern.presentation.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
