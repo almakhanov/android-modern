@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="?attr/colorPrimaryVariant" />
+    <item
+        android:width="146dp"
+        android:height="28dp"
+        android:drawable="@drawable/ic_logo"
+        android:gravity="center"
+        android:bottom="100dp"/>
+</layer-list>
