@@ -40,6 +40,8 @@ import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
 import kz.veter420.android_modern.R
 import kz.veter420.android_modern.presentation.alert.AlertContent
+import kz.veter420.android_modern.presentation.navigation.Destinations
+import kz.veter420.android_modern.presentation.navigation.navigateBack
 import kz.veter420.android_modern.presentation.ui.components.DotsIndicator
 import kz.veter420.android_modern.presentation.ui.components.LoadingView
 import kz.veter420.android_modern.presentation.ui.components.TextToolbar
@@ -90,7 +92,7 @@ fun ProductDetailScreenContent(navController: NavController, productId: Int, mVi
 			text = stringResource(id = R.string.product),
 			showBackButton = true,
 			onClickBack = {
-				navController.popBackStack()
+				navController.navigateBack(Destinations.Products.route)
 			}
 		)
 		Box(

@@ -24,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import kz.veter420.android_modern.R
 import kz.veter420.android_modern.presentation.alert.AlertContent
@@ -34,7 +33,6 @@ import kz.veter420.android_modern.presentation.ui.components.ProductViewItem
 import kz.veter420.android_modern.presentation.ui.components.TextToolbar
 import kz.veter420.android_modern.presentation.ui.theme.Colors
 import org.koin.androidx.compose.koinViewModel
-import kz.veter420.android_modern.presentation.navigation.navigate
 
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -111,12 +109,7 @@ fun ProductScreenContent(navController: NavController, mViewModel: ProductViewMo
 							ProductViewItem(
 								item = item,
 								onClick = {
-									navController.navigate(
-										route = Destinations.ProductDetailPage().route,
-										args = bundleOf(
-											Destinations.ProductDetailPage().id to it.id,
-										)
-									)
+									navController.navigate(route = Destinations.Products.route + "/${it.id}")
 								}
 							)
 						}

@@ -24,3 +24,24 @@ fun NavController.navigate(
         navigate(route, navOptions, navigatorExtras)
     }
 }
+
+fun NavController.navigateBack(
+    destinationRoute: String
+) {
+    val hasBackstackTheDestinationRoute = this@navigateBack.currentBackStack.value.find {
+        it.destination.route == destinationRoute
+    } != null
+    // if the destination is already in the backstack, simply go back
+    if (hasBackstackTheDestinationRoute) {
+        this.popBackStack()
+    } else {
+        // otherwise, navigate to a new destination popping the current destination
+        this@navigateBack.navigate(destinationRoute) {
+            this@navigateBack.currentBackStackEntry?.destination?.route?.let {
+                popUpTo(it) {
+                    inclusive = true
+                }
+            }
+        }
+    }
+}
