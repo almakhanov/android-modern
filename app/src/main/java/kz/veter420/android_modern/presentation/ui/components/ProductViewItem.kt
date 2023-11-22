@@ -96,7 +96,7 @@ fun ProductViewItem(
 				.padding(top = 8.dp)
 		)
 		Text(
-			text = stringResource(id = R.string.read_more),
+			text = "Read more...",
 			style = TextStyle(
 				fontSize = 14.sp,
 				fontWeight = FontWeight(500),

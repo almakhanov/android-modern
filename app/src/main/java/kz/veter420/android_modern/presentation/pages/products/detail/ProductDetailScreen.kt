@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.presentation.products.detail
+package kz.veter420.android_modern.presentation.pages.products.detail
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -39,7 +39,7 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
 import kz.veter420.android_modern.R
-import kz.veter420.android_modern.presentation.alert.AlertContent
+import kz.veter420.android_modern.presentation.pages.alert.AlertContent
 import kz.veter420.android_modern.presentation.navigation.Destinations
 import kz.veter420.android_modern.presentation.navigation.navigateBack
 import kz.veter420.android_modern.presentation.ui.components.DotsIndicator

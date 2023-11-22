@@ -1,52 +1,52 @@
-package kz.veter420.android_modern.presentation.products
+package kz.veter420.android_modern.presentation.pages.post
 
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kz.veter420.android_modern.data.dto.base.AsyncResult
-import kz.veter420.android_modern.domain.use_case.GetProductsUseCase
-import kz.veter420.android_modern.presentation.alert.AlertData
 import kz.veter420.android_modern.presentation.base.BaseViewModel
 import kz.veter420.android_modern.presentation.base.Reducer
+import kz.veter420.android_modern.domain.use_case.GetPostsUseCase
+import kz.veter420.android_modern.presentation.pages.alert.AlertData
 
 
-class ProductViewModel(
-	private val getProductsUseCase: GetProductsUseCase
-) : BaseViewModel<ProductContract.State, ProductContract.Event>() {
+class PostViewModel(
+	private val getPostsUseCase: GetPostsUseCase
+) : BaseViewModel<PostContract.State, PostContract.Event>() {
 
-	private val reducer = ReducerImpl(ProductContract.State())
+	private val reducer = ReducerImpl(PostContract.State())
 
-	override val state: StateFlow<ProductContract.State> get() = reducer.state
+	override val state: StateFlow<PostContract.State> get() = reducer.state
 
 	init {
-		updateProducts()
+		updatePosts()
 	}
 
-	fun updateProducts(
+	fun updatePosts(
 		isRefreshing: Boolean = false
 	) {
 		if (isRefreshing) {
-			reducer.sendEvent(ProductContract.Event.Refresh)
+			reducer.sendEvent(PostContract.Event.Refresh)
 		}
-		reducer.sendEvent(ProductContract.Event.GetProducts)
+		reducer.sendEvent(PostContract.Event.GetPosts)
 	}
 
 
 	private inner class ReducerImpl(
-		initial: ProductContract.State
-	) : Reducer<ProductContract.State, ProductContract.Event>(initial) {
-		override fun reduce(oldState: ProductContract.State, event: ProductContract.Event) {
+		initial: PostContract.State
+	) : Reducer<PostContract.State, PostContract.Event>(initial) {
+		override fun reduce(oldState: PostContract.State, event: PostContract.Event) {
 			when (event) {
-				ProductContract.Event.Refresh -> setState(
+				PostContract.Event.Refresh -> setState(
 					oldState.copy(
 						refreshing = true,
 						error = null
 					)
 				)
 
-				ProductContract.Event.GetProducts -> {
-					getProductsUseCase.invoke().onEach { result ->
+				PostContract.Event.GetPosts -> {
+					getPostsUseCase.invoke().onEach { result ->
 						when (result) {
 							is AsyncResult.Success -> {
 								setState(

@@ -13,9 +13,10 @@ import kz.veter420.android_modern.domain.repository.ProductRepository
 import kz.veter420.android_modern.domain.use_case.GetPostsUseCase
 import kz.veter420.android_modern.domain.use_case.GetProductByIdUseCase
 import kz.veter420.android_modern.domain.use_case.GetProductsUseCase
-import kz.veter420.android_modern.presentation.post.PostViewModel
-import kz.veter420.android_modern.presentation.products.ProductViewModel
-import kz.veter420.android_modern.presentation.products.detail.ProductDetailViewModel
+import kz.veter420.android_modern.presentation.pages.post.PostViewModel
+import kz.veter420.android_modern.presentation.pages.products.ProductViewModel
+import kz.veter420.android_modern.presentation.pages.products.detail.ProductDetailViewModel
+import kz.veter420.android_modern.presentation.pages.profile.ProfileViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -41,4 +42,5 @@ val appModule = module {
     factory { PostViewModel(get()) }
     factory { ProductViewModel(get()) }
     factory { ProductDetailViewModel(get()) }
+    factory { ProfileViewModel() }
 }

@@ -12,30 +12,25 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import kz.veter420.android_modern.R
-import kz.veter420.android_modern.data.local.PrefManager
 import kz.veter420.android_modern.presentation.navigation.BottomNavItem
 import kz.veter420.android_modern.presentation.navigation.BottomNavigationBar
 import kz.veter420.android_modern.presentation.navigation.Destinations
-import kz.veter420.android_modern.presentation.post.PostScreen
-import kz.veter420.android_modern.presentation.products.ProductScreen
-import kz.veter420.android_modern.presentation.products.detail.ProductDetailScreen
+import kz.veter420.android_modern.presentation.pages.post.PostScreen
+import kz.veter420.android_modern.presentation.pages.products.ProductScreen
+import kz.veter420.android_modern.presentation.pages.products.detail.ProductDetailScreen
+import kz.veter420.android_modern.presentation.pages.profile.ProfileScreen
 import kz.veter420.android_modern.presentation.ui.theme.MainTheme
-import org.koin.androidx.compose.get
 
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MviApp(
-	prefManager: PrefManager = get()
-) {
+fun MviApp() {
 
 	val navController = rememberNavController()
 
@@ -104,7 +99,7 @@ fun MviApp(
 					PostScreen(navController)
 				}
 				composable(route = Destinations.Profile.route) {
-					PostScreen(navController)
+					ProfileScreen(navController)
 				}
 				composable(
 					route = Destinations.ProductDetailPage().route,

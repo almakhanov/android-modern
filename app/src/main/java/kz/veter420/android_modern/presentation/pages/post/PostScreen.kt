@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.presentation.post
+package kz.veter420.android_modern.presentation.pages.post
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import kz.veter420.android_modern.R
-import kz.veter420.android_modern.presentation.alert.AlertContent
+import kz.veter420.android_modern.presentation.pages.alert.AlertContent
 import kz.veter420.android_modern.presentation.ui.components.LoadingView
 import kz.veter420.android_modern.presentation.ui.components.PostViewItem
 import kz.veter420.android_modern.presentation.ui.components.TextToolbar

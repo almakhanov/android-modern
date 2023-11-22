@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.presentation.alert
+package kz.veter420.android_modern.presentation.pages.alert
 
 
 data class AlertData(

@@ -1,7 +1,7 @@
-package kz.veter420.android_modern.presentation.post
+package kz.veter420.android_modern.presentation.pages.post
 
 import kz.veter420.android_modern.data.dto.response.PostListDto
-import kz.veter420.android_modern.presentation.alert.AlertData
+import kz.veter420.android_modern.presentation.pages.alert.AlertData
 import kz.veter420.android_modern.presentation.base.UiEvent
 import kz.veter420.android_modern.presentation.base.UiState
 
