@@ -12,6 +12,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -24,15 +25,13 @@ import kz.veter420.android_modern.presentation.navigation.Destinations
 import kz.veter420.android_modern.presentation.pages.post.PostScreen
 import kz.veter420.android_modern.presentation.pages.products.ProductScreen
 import kz.veter420.android_modern.presentation.pages.products.detail.ProductDetailScreen
-import kz.veter420.android_modern.presentation.pages.profile.ProfileScreen
+import kz.veter420.android_modern.presentation.pages.calc.CalcScreen
 import kz.veter420.android_modern.presentation.ui.theme.MainTheme
 
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MviApp() {
-
-	val navController = rememberNavController()
+fun MviApp(navController: NavHostController = rememberNavController()) {
 
 	val navItems = mutableListOf<BottomNavItem>().apply {
 		add(
@@ -51,8 +50,8 @@ fun MviApp() {
 		)
 		add(
 			BottomNavItem(
-				name = stringResource(id = R.string.profile),
-				route = Destinations.Profile.route,
+				name = stringResource(id = R.string.calc),
+				route = Destinations.Calculator.route,
 				icon = painterResource(id = R.drawable.ic_user)
 			)
 		)
@@ -98,8 +97,8 @@ fun MviApp() {
 				composable(route = Destinations.Post.route) {
 					PostScreen(navController)
 				}
-				composable(route = Destinations.Profile.route) {
-					ProfileScreen(navController)
+				composable(route = Destinations.Calculator.route) {
+					CalcScreen(navController)
 				}
 				composable(
 					route = Destinations.ProductDetailPage().route,

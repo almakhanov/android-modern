@@ -20,11 +20,12 @@ import kz.veter420.android_modern.presentation.ui.theme.Colors
 
 @Composable
 fun OutlinedText(
+    modifier: Modifier,
     text: String
 ) {
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .height(44.dp)
             .fillMaxWidth()
             .fillMaxWidth(fraction = 0.68f)

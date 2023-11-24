@@ -14,7 +14,7 @@ abstract class Reducer<S : UiState, E : UiEvent>(initialVal: S) {
     }
 
     fun setState(newState: S) {
-        val success = _state.tryEmit(newState)
+        _state.tryEmit(newState)
     }
 
     abstract fun reduce(oldState: S, event: E)
