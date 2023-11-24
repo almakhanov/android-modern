@@ -110,7 +110,6 @@ dependencies {
 
     // Permission
     implementation 'com.google.accompanist:accompanist-permissions:0.31.6-rc'
-    implementation "commons-io:commons-io:2.7"
 
     // Testing
     testImplementation 'junit:junit:4.13.2'
