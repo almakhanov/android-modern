@@ -7,7 +7,7 @@ import androidx.compose.ui.test.performClick
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import junit.framework.TestCase.assertEquals
-import kz.veter420.android_modern.app.MviApp
+import kz.veter420.android_modern.presentation.app.MviApp
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

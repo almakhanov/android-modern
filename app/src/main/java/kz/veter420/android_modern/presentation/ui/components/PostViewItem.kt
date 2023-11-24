@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kz.veter420.android_modern.data.dto.response.PostDto
 import kz.veter420.android_modern.presentation.ui.theme.Colors
-import kz.veter420.android_modern.utils.debounceClickable
+import kz.veter420.android_modern.presentation.utils.debounceClickable
 
 @Composable
 fun PostViewItem(

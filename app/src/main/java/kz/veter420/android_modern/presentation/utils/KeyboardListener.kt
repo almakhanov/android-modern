@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.utils
+package kz.veter420.android_modern.presentation.utils
 
 import android.graphics.Rect
 import android.view.ViewTreeObserver
@@ -24,9 +24,9 @@ fun keyboardAsState(default: Keyboard = Keyboard.Closed): State<Keyboard> {
             val screenHeight = view.rootView.height
             val keypadHeight = screenHeight - rect.bottom
             keyboardState.value = if (keypadHeight > screenHeight * 0.15) {
-                Keyboard.Opened
+	            Keyboard.Opened
             } else {
-                Keyboard.Closed
+	            Keyboard.Closed
             }
         }
         view.viewTreeObserver.addOnGlobalLayoutListener(onGlobalListener)

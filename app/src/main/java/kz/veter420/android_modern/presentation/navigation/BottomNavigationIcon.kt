@@ -14,7 +14,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import kz.veter420.android_modern.presentation.ui.theme.Colors
-import kz.veter420.android_modern.utils.setGradient
+import kz.veter420.android_modern.presentation.utils.setGradient
 
 @Composable
 fun BottomNavigationIcon(

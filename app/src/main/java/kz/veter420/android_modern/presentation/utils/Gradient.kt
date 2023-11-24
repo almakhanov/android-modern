@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.utils
+package kz.veter420.android_modern.presentation.utils
 
 import android.annotation.SuppressLint
 import androidx.compose.ui.Modifier

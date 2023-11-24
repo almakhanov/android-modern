@@ -16,8 +16,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import kz.veter420.android_modern.presentation.ui.theme.Colors
 import kz.veter420.android_modern.presentation.ui.theme.MainTheme
-import kz.veter420.android_modern.utils.debounceClickable
-import kz.veter420.android_modern.utils.setGradient
+import kz.veter420.android_modern.presentation.utils.debounceClickable
+import kz.veter420.android_modern.presentation.utils.setGradient
 
 @Composable
 fun LoadingView(alpha: Float = 1f) {

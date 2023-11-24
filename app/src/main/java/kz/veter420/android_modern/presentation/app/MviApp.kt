@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.app
+package kz.veter420.android_modern.presentation.app
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -38,7 +38,7 @@ fun MviApp(navController: NavHostController = rememberNavController()) {
 			BottomNavItem(
 				name = stringResource(id = R.string.posts),
 				route = Destinations.Post.route,
-				icon = painterResource(id = R.drawable.ic_document)
+				icon = painterResource(id = R.drawable.ic_newspaper)
 			)
 		)
 		add(
@@ -52,7 +52,7 @@ fun MviApp(navController: NavHostController = rememberNavController()) {
 			BottomNavItem(
 				name = stringResource(id = R.string.calc),
 				route = Destinations.Calculator.route,
-				icon = painterResource(id = R.drawable.ic_user)
+				icon = painterResource(id = R.drawable.ic_calculate)
 			)
 		)
 	}

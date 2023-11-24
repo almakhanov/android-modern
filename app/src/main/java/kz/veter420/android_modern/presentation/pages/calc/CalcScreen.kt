@@ -70,7 +70,7 @@ fun CalcScreenContent(navController: NavController, mViewModel: CalcViewModel) {
 			}
 		)
 		Column(
-			modifier = Modifier.fillMaxWidth()
+			modifier = Modifier.fillMaxWidth().padding(16.dp)
 		) {
 			val input1State = remember { mutableStateOf(TextFieldValue()) }
 			val input2State = remember { mutableStateOf(TextFieldValue()) }

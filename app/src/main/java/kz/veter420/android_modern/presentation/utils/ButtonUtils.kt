@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.utils
+package kz.veter420.android_modern.presentation.utils
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable

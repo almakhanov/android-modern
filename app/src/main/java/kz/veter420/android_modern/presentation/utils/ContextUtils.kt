@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.utils
+package kz.veter420.android_modern.presentation.utils
 
 import android.Manifest.permission.READ_EXTERNAL_STORAGE
 import android.app.Activity

@@ -1,4 +1,4 @@
-package kz.veter420.android_modern.app
+package kz.veter420.android_modern.presentation.app
 
 import android.app.Application
 import kz.veter420.android_modern.di.appModule
