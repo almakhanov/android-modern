@@ -10,11 +10,6 @@ object Colors {
     val BackgroundSecondaryLight = Color(0xFFE3E3E3)
 
     val ElementStroke = Color(0xFF4D4D4D)
-    val ElementType1 = Color(0xFFE85524)
-    val ElementType2: Color = Color(0xFFF69D16)
-    val ElementType3: Color = Color(0xFF28AEF3)
-    val ElementType4: Color = Color(0xFFAB499F)
-    val ElementType5 = Color(0xFF6BE8D7)
 
     val TextPrimary = Color(0xFFEDEDED)
     val TextSecondary = Color(0xFFA9A9A9)
